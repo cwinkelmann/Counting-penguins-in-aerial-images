@@ -41,7 +41,7 @@ def parse_arg():
     parser.add_argument('--start-epoch', default=0, type=int,
                         help='the number of starting epoch')
     parser.add_argument('--epochs', default=600, type=int,
-                        help='the maximum number of training epoch')
+                        help='the maximum number of training epochs')
     parser.add_argument('--start-val', default=100, type=int,
                         help='the starting epoch for validation')
     parser.add_argument('--val-epoch', default=1, type=int,

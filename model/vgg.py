@@ -1,11 +1,10 @@
-import torch.nn as nn
 import torch.utils.model_zoo as model_zoo
-import torch
 from torch.nn import functional as F
-import torch
 import torch.nn as nn
 from functools import partial
-from timm.models.layers import DropPath, trunc_normal_
+
+## FIXME why is this extra library imported but never used?
+# from timm.models.layers import DropPath, trunc_normal_
 
 
 __all__ = ['vgg19']
