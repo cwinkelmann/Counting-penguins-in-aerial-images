@@ -22,6 +22,9 @@ def parse_arg():
 
 
 if __name__ == '__main__':
+
+    # TODO fix the paths
+
     args = parse_arg()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.device.strip()
 
@@ -32,8 +35,10 @@ if __name__ == '__main__':
     device = torch.device('cuda')
     model.to(device)
     model.load_state_dict(torch.load(args.saved_model, device))
+
     out_file = '/content/drive/MyDrive/penguin/validate.csv'
     out = open(out_file, 'w')
+
     out.write('name,true,pred,diff\n')
     print('-' * 25 + 'Model loaded!' + '-' * 25)
     model.eval()
