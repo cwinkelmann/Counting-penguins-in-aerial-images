@@ -49,6 +49,7 @@ if __name__ == '__main__':
         assert inputs.size(0) == 1
         with torch.set_grad_enabled(False):
             den, bg = model(inputs)
+            # TODO thats funny. There is no density map. This is simply a regression model.
             true = points.item()
             pred = (((den * (bg >= 0.5)))).sum().item()
             diff = true - pred
