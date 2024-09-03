@@ -50,6 +50,7 @@ def parse_arg():
     return args
 
 
+
 if __name__ == '__main__':
     args = parse_arg()
     torch.backends.cudnn.benchmark = True
